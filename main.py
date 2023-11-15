@@ -29,12 +29,12 @@ else:
     uplod_file_excel=st.sidebar.file_uploader("Upload your file(only in Excel)",type="xlsx")
 if uplod_file_excel is not None:
     st.markdown('---')
-    df=pd.read_excel(uplod_file_excel,engine="openpyxl")
+    df1=pd.read_excel(uplod_file_excel,engine="openpyxl")
 
-    profile_excel=ProfileReport(df,title="summary of the data")
+    profile_excel=ProfileReport(df1,title="summary of the data")
 
     st.title("Detailed Report ")
-    st.write(df)
+    st.write(df1)
     st_profile_report(profile_excel)
 
 else:
