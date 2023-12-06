@@ -26,7 +26,7 @@ else:
     st.markdown('---')
     st.write("You Have no any CSV File")
     #excel
-    uplod_file_excel=st.sidebar.file_uploader("Upload your file(only in Excel)",type="xlsx")
+uplod_file_excel=st.sidebar.file_uploader("Upload your file(only in Excel)",type="xlsx")
 if uplod_file_excel is not None:
     st.markdown('---')
     df1=pd.read_excel(uplod_file_excel,engine="openpyxl")
